@@ -10,7 +10,7 @@ if not WHM_Utilities then
     return
 end
 
-local WHM_DataStore = _G["EF_DataStore"]
+local WHM_DataStore = _G["WHM_DataStore"]
 if not WHM_DataStore then
     error("ERROR: Utility Functions Required", 3)
     return
