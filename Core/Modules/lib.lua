@@ -5,8 +5,8 @@ if not WHM_Modules then
     _G["WHM_Modules"] = WHM_Modules
 end
 
-local WHM_Modules = _G["WHM_Modules"]
-if not WHM_Modules then
+local WHM_Utilities = _G["WHM_Utilities"]
+if not WHM_Utilities then
     error("ERROR: Utility Functions Required", 3)
     return
 end
