@@ -1,0 +1,80 @@
+<Project ToolsVersion="4.0" DefaultTargets="Deploy" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>WHM_Framework</Name>
+    <ProjectGuid>f3af5058-b282-4997-80a7-7630e8b813a2</ProjectGuid>
+    <AssemblyName>WHM_Framework</AssemblyName>
+    <RootNamespace>WHM_Framework</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".pkgmeta" />
+    <Content Include="Core\core.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>Core\core.xml</DependentUpon>
+    </Content>
+    <Content Include="Core\core.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="Core\DataStore\headers.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\DataStore\indexer.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\DataStore\lib.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\DataStore\lib.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="Core\DataStore\response.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\DataStore\schema.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\DataStore\validate.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\Modules\lib.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Core\Utilities\lib.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Modules\Auras\module.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>Modules\Auras\module.xml</DependentUpon>
+    </Content>
+    <Content Include="Modules\Auras\module.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="WHM_Framework.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="WHM_Framework.toc">
+      <SubType>TableOfContents</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core" />
+    <Folder Include="Core\DataStore" />
+    <Folder Include="Core\Modules" />
+    <Folder Include="Core\Utilities" />
+    <Folder Include="Modules" />
+    <Folder Include="Modules\Auras" />
+  </ItemGroup>
+  <Import Project="$(DevEnvDir)\Extensions\Tools\MSBuild\AddonStudio\Wow\3.0\WowAddonStudio.targets" />
+  <!--
+  To modify your build process, add your task inside one of the targets below and uncomment it.
+  <Target Name="BeforeClean"></Target>
+  <Target Name="AfterClean"></Target>
+  <Target Name="BeforeRebuild"></Target>
+  <Target Name="AfterRebuild"></Target>
+  <Target Name="BeforeDeploy"></Target>
+  <Target Name="AfterDeploy"></Target>
+  -->
+</Project>
