@@ -15,17 +15,15 @@ local top_level_meta = {
     end,
     __newindex = function(t, k, v)
         error("invalid table reference", 3)
-    end
-    __mode = function()
-    end
+    end,
     __call = function(t, k)
         indexer(table, index)
         return _indexes[k]
-    end
+    end,
     __metatable = "WHM_DataStore:indexer",
     __len = function(t)
         return 0
-    end
+    end,
     __pairs = function(t)
         local function stateless_iter(t, k)
             local v
