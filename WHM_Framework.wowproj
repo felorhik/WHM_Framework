@@ -11,45 +11,49 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".pkgmeta" />
-    <Content Include="Core\core.lua">
-      <SubType>Code</SubType>
-      <DependentUpon>Core\core.xml</DependentUpon>
-    </Content>
-    <Content Include="Core\core.xml">
+    <Content Include="build.bat" />
+    <Content Include="core\core.xml">
       <SubType>Frame</SubType>
     </Content>
-    <Content Include="Core\DataStore\headers.lua">
+    <Content Include="core\DataStore\headers.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Core\DataStore\indexer.lua">
+    <Content Include="core\DataStore\indexer.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Core\DataStore\lib.lua">
+    <Content Include="core\DataStore\lib.lua">
       <SubType>Code</SubType>
+      <DependentUpon>core\DataStore\lib.xml</DependentUpon>
     </Content>
-    <Content Include="Core\DataStore\lib.xml">
+    <Content Include="core\DataStore\lib.xml">
       <SubType>Frame</SubType>
     </Content>
-    <Content Include="Core\DataStore\response.lua">
+    <Content Include="core\DataStore\response.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Core\DataStore\schema.lua">
+    <Content Include="core\DataStore\schema.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Core\DataStore\validate.lua">
+    <Content Include="core\DataStore\validate.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Core\Modules\lib.lua">
+    <Content Include="core\Modules\lib.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Core\Utilities\lib.lua">
+    <Content Include="core\Utilities\lib.lua">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Modules\Auras\module.lua">
-      <SubType>Code</SubType>
-      <DependentUpon>Modules\Auras\module.xml</DependentUpon>
+    <Content Include="embeds.xml">
+      <SubType>Frame</SubType>
     </Content>
-    <Content Include="Modules\Auras\module.xml">
+    <Content Include="modules\auras\module.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>modules\auras\module.xml</DependentUpon>
+    </Content>
+    <Content Include="modules\auras\module.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="modules\modules.xml">
       <SubType>Frame</SubType>
     </Content>
     <Content Include="WHM_Framework.lua">
@@ -60,12 +64,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core" />
-    <Folder Include="Core\DataStore" />
-    <Folder Include="Core\Modules" />
-    <Folder Include="Core\Utilities" />
-    <Folder Include="Modules" />
-    <Folder Include="Modules\Auras" />
+    <Folder Include="core" />
+    <Folder Include="core\DataStore" />
+    <Folder Include="core\Modules" />
+    <Folder Include="core\Utilities" />
+    <Folder Include="modules" />
+    <Folder Include="modules\auras" />
   </ItemGroup>
   <Import Project="$(DevEnvDir)\Extensions\Tools\MSBuild\AddonStudio\Wow\3.0\WowAddonStudio.targets" />
   <!--

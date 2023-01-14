@@ -28,7 +28,7 @@ local function update_unit_auras(unit)
 	end
 
 	local auras = WHM_Utilities:auras(unit)
-	for index, aura in pairs(auras) then
+	for index, aura in pairs(auras) do
 	    local tableData = {
             name = aura.name,
             icon = aura.icon,

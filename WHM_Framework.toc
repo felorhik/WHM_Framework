@@ -1,11 +1,27 @@
 ## Title: WHM Framework
 ## Version: 1.0
 ## Author: bonjo
-## Interface: 80205
+## Interface: 100002
 ## DefaultState: enabled
-## OptionalDeps: LibStub, CallbackHandler-1.0, AceConsole-3.0, AceEvent-3.0, AceTimer-3.0, AceConfigRegistry-3.0, AceConfigDialog-3.0, AceAddon-3.0, AceDB-3.0
+## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3
 ## SavedVariables: WHM_FrameworkDB
+#@alpha@
+# ## OptionalDeps: BugSack, Swatter
+#@end-alpha@
 
-Core\core.xml
+#@no-lib-strip@
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceAddon-3.0\AceAddon-3.0.xml
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\AceConsole-3.0\AceConsole-3.0.xml
+libs\AceEvent-3.0\AceEvent-3.0.xml
+libs\AceTimer-3.0\AceTimer-3.0.xml
+libs\AceConfigRegistry-3.0\AceConfigRegistry-3.0.xml
+libs\AceConfigDialog-3.0\AceConfigDialog-3.0.xml
+#@end-no-lib-strip@
+
+core\core.xml
 WHM_Framework.lua
-Modules\Auras\module.xml
+
+modules\auras\module.xml
